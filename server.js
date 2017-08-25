@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles ={
-articleOne : {
+'article-one' : {
     title : 'Article One : Dolly',
     heading : 'Article One',
     date :'23rd August 2017',
@@ -32,7 +32,7 @@ articleOne : {
 },
 
 
-articleTwo : {
+'article-two ': {
     title : 'Article Two : Dolly',
     heading : 'Article Two',
     date :'23rd August 2017',
@@ -58,7 +58,7 @@ articleTwo : {
 },
 
 
-articleThree : {
+'article-three': {
     title : 'Article Three : Dolly',
     heading : 'Article Three',
     date :'23rd August 2017',
@@ -153,10 +153,10 @@ function createFunction(data){
 
 app.get('/:articleName',function (req,res){
 
-    res.send(createFunction(articles(articleName)));
+    res.send(createFunction(articles[articleName]));
 });
 
-/*app.get('/article-two',function (req,res){
+app.get('/article-two',function (req,res){
     res.sendFile(path.join(__dirname,'ui','article-two.html'));
 });
 
@@ -167,7 +167,7 @@ app.get('/article-three',function (req,res){
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-}); */
+});
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
