@@ -4,6 +4,32 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+
+
+var articleOne = {
+    title : 'Article One : Dolly',
+    heading : 'Article One',
+    date :'23rd August 2017',
+    content :` <p>
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+    
+            </p>
+            
+            <p>
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+    
+            </p>
+    
+            <p>
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+                 Hi, i am Dolly Tejwani.Thank You IMAD.
+    
+            </p>`
+
+    
+};
     
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -88,7 +114,7 @@ app.get('/', function (req, res) {
                 
     }
         
-};
+};*/
 
 function createFunction(data){
     var title= data.title;
@@ -143,12 +169,13 @@ function createFunction(data){
     return htmlTemplate;
     
 }    
-*/
+
 
 
 
 app.get('/article-one',function (req,res){
-    res.sendFile(path.join(__dirname,'ui','article-one.html'));
+
+    res.send(createFunction(articleOne));
 });
 
 app.get('/article-two',function (req,res){
