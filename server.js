@@ -11,8 +11,8 @@ app.get('/', function (req, res) {
 
 var articles ={
 
-var articleOne = {
-    title:'Article One: Dolly',
+var articleOne:{
+    title: 'Article One : Dolly',
     heading:'article One',
     date: '23rd August,2017',
     content:   
@@ -36,7 +36,7 @@ var articleOne = {
         
 },
 
-var ArticleTwo ={
+var ArticleTwo :{
 
     title:'Article Two: Dolly',
     heading:'article Two',
@@ -63,7 +63,7 @@ var ArticleTwo ={
 },
 
 
-var ArticleThree ={
+var ArticleThree :{
 
     title:'Article Three: Dolly',
     heading:'article Threee',
