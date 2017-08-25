@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var articleOne = {
+var articles ={
+articleOne : {
     title : 'Article One : Dolly',
     heading : 'Article One',
     date :'23rd August 2017',
@@ -29,92 +29,70 @@ var articleOne = {
             </p>`
 
     
+},
+
+
+articleTwo : {
+    title : 'Article Two : Dolly',
+    heading : 'Article Two',
+    date :'23rd August 2017',
+    content :` <p>
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+    
+            </p>
+            
+            <p>
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+    
+            </p>
+    
+            <p>
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+                 Hi, i am Dolly Tejwani.Thank You IMAD.
+    
+            </p>`
+
+    
+},
+
+
+articleThree : {
+    title : 'Article Three : Dolly',
+    heading : 'Article Three',
+    date :'23rd August 2017',
+    content :` <p>
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+    
+            </p>
+            
+            <p>
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+    
+            </p>
+    
+            <p>
+                Hi, i am Dolly Tejwani.Thank You IMAD.
+                 Hi, i am Dolly Tejwani.Thank You IMAD.
+    
+            </p>`
+
+    
+},
+
+
+
 };
+
+
     
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-/*var articles = {
-    article-one:{
-        title: 'Article One Dolly',
-        heading:'Article one',
-        date:'23rd August,2017',
-        content: ` 
-                        <p>
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                        
-                         </p>
-                                
-                         <p>
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                        
-                         </p>
-                        
-                         <p>
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                             Hi, i am Dolly Tejwani.Thank You IMAD.
-                        
-                         </p>`
-                
-    },
-
-    article-two :{
-
-            title:'Article Two: Dolly',
-            heading:'article Two',
-            date: '23rd August,2017',
-            content:   
-                       ` <p>
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                        
-                         </p>
-                                
-                         <p>
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                        
-                         </p>
-                        
-                         <p>
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                             Hi, i am Dolly Tejwani.Thank You IMAD.
-                        
-                         </p>`
-                
-    },
-
-
-    article-three:{
-
-            title:'Article Three: Dolly',
-            heading:'article Threee',
-            date: '23rd August,2017',
-            content:   
-                       ` <p>
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                        
-                         </p>
-                                
-                         <p>
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                        
-                         </p>
-                        
-                         <p>
-                            Hi, i am Dolly Tejwani.Thank You IMAD.
-                             Hi, i am Dolly Tejwani.Thank You IMAD.
-                        
-                         </p>`
-                
-    }
-        
-};*/
 
 function createFunction(data){
     var title= data.title;
@@ -173,12 +151,12 @@ function createFunction(data){
 
 
 
-app.get('/article-one',function (req,res){
+app.get('/:articleName',function (req,res){
 
-    res.send(createFunction(articleOne));
+    res.send(createFunction(articles(articleName)));
 });
 
-app.get('/article-two',function (req,res){
+/*app.get('/article-two',function (req,res){
     res.sendFile(path.join(__dirname,'ui','article-two.html'));
 });
 
@@ -189,7 +167,7 @@ app.get('/article-three',function (req,res){
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-});
+}); */
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
