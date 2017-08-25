@@ -11,87 +11,85 @@ app.get('/', function (req, res) {
 
 var articles = {
 
-    var articleOne:{
-    title: 'Article One | Dolly',
-    heading:'article One',
-    date: '23rd August,2017',
-    content:   
-               ` <p>
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
-                
-                 </p>
+    var article-one: {
+            title: 'Article One | Dolly',
+            heading:'article One',
+            date: '23rd August,2017',
+            content:   
+                       ` <p>
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
                         
-                 <p>
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
-                
-                 </p>
-                
-                 <p>
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
-                     Hi, i am Dolly Tejwani.Thank You IMAD.
-                
-                 </p>`
-        
-    },
-
-    var ArticleTwo :{
-
-    title:'Article Two: Dolly',
-    heading:'article Two',
-    date: '23rd August,2017',
-    content:   
-               ` <p>
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
-                
-                 </p>
+                         </p>
+                                
+                         <p>
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
                         
-                 <p>
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
-                
-                 </p>
-                
-                 <p>
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
-                     Hi, i am Dolly Tejwani.Thank You IMAD.
-                
-                 </p>`
-        
-    },
-
-
-    var ArticleThree:{
-
-    title:'Article Three: Dolly',
-    heading:'article Threee',
-    date: '23rd August,2017',
-    content:   
-               ` <p>
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
-                
-                 </p>
+                         </p>
                         
-                 <p>
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
+                         <p>
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
+                             Hi, i am Dolly Tejwani.Thank You IMAD.
+                        
+                         </p>`
                 
-                 </p>
+            },
+
+    var article-two :{
+
+            title:'Article Two: Dolly',
+            heading:'article Two',
+            date: '23rd August,2017',
+            content:   
+                       ` <p>
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
+                        
+                         </p>
+                                
+                         <p>
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
+                        
+                         </p>
+                        
+                         <p>
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
+                             Hi, i am Dolly Tejwani.Thank You IMAD.
+                        
+                         </p>`
                 
-                 <p>
-                    Hi, i am Dolly Tejwani.Thank You IMAD.
-                     Hi, i am Dolly Tejwani.Thank You IMAD.
+            },
+
+
+    var article-three:{
+
+            title:'Article Three: Dolly',
+            heading:'article Threee',
+            date: '23rd August,2017',
+            content:   
+                       ` <p>
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
+                        
+                         </p>
+                                
+                         <p>
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
+                        
+                         </p>
+                        
+                         <p>
+                            Hi, i am Dolly Tejwani.Thank You IMAD.
+                             Hi, i am Dolly Tejwani.Thank You IMAD.
+                        
+                         </p>`
                 
-                 </p>`
+            }
         
-    },
-
-
-
-};
+        };
 
 function createFunction(data){
     var title= data.title;
@@ -103,7 +101,7 @@ function createFunction(data){
     <html>
       <head>
         <title>
-            Article One : Dolly
+            ${title}
         </title>
         
         <meta name = "viewport" content = "width = device-width,initial-scale =1"/>
