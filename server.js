@@ -10,13 +10,12 @@ app.get('/', function (req, res) {
 });
 
 var articles = {
-
-    var article-one: {
-            title: 'Article One | Dolly',
-            heading:'article One',
-            date: '23rd August,2017',
-            content:   
-                       ` <p>
+    article-one:{
+        title: 'Article One Dolly',
+        heading:'Article one',
+        date:'23rd August,2017',
+        content: ` 
+                        <p>
                             Hi, i am Dolly Tejwani.Thank You IMAD.
                             Hi, i am Dolly Tejwani.Thank You IMAD.
                         
@@ -36,7 +35,7 @@ var articles = {
                 
             },
 
-    var article-two :{
+        article-two :{
 
             title:'Article Two: Dolly',
             heading:'article Two',
@@ -58,12 +57,12 @@ var articles = {
                             Hi, i am Dolly Tejwani.Thank You IMAD.
                              Hi, i am Dolly Tejwani.Thank You IMAD.
                         
-                         </p>`
+                         </p>`;
                 
             },
 
 
-    var article-three:{
+        article-three:{
 
             title:'Article Three: Dolly',
             heading:'article Threee',
@@ -85,7 +84,7 @@ var articles = {
                             Hi, i am Dolly Tejwani.Thank You IMAD.
                              Hi, i am Dolly Tejwani.Thank You IMAD.
                         
-                         </p>`
+                         </p>`;
                 
             }
         
@@ -101,7 +100,7 @@ function createFunction(data){
     <html>
       <head>
         <title>
-            ${title}
+            ${title};
         </title>
         
         <meta name = "viewport" content = "width = device-width,initial-scale =1"/>
@@ -121,15 +120,15 @@ function createFunction(data){
             
             <div>
                 <h3>
-                    ${heading}
+                    ${heading};
                 </h3>
             </div>
             
             <div>
-                ${date}
+                ${date};
             </div>
             
-            ${content}    
+            ${content} ;   
             
         </div>
         
@@ -149,7 +148,7 @@ function createFunction(data){
 
 
 app.get('/article-one',function (req,res){
-    res.send(createFunction(articleOne));
+    res.send(createFunction(article-onene));
 });
 
 app.get('/article-two',function (req,res){
