@@ -4,12 +4,7 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-
     
-
-    
-
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -148,13 +143,13 @@ function createFunction(data){
     return htmlTemplate;
     
 }    
-
+*/
 
 
 
 app.get('/article-one',function (req,res){
-    res.send(createFunction(article-onne));
-});*/
+    res.sendFile(path.join(__dirname,'ui','article-one.html'));
+});
 
 app.get('/article-two',function (req,res){
     res.sendFile(path.join(__dirname,'ui','article-two.html'));
