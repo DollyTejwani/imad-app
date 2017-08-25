@@ -32,7 +32,7 @@ var articles ={
 },
 
 
-'article-two ': {
+'article-two': {
     title : 'Article Two : Dolly',
     heading : 'Article Two',
     date :'23rd August 2017',
